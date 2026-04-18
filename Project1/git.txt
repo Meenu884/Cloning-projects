@@ -1,0 +1,32 @@
+github commands
+
+ git --version
+ cd Desktop
+ mkdir git-tut
+ cd git-tut
+ New-Item -Path . -Name "one.txt" -ItemType "File"
+ New-Item -Path . -Name "two.txt" -ItemType "File"
+ mkdir myFolder
+ cd myFolder
+ New-Item -Path . -Name "git.txt" -ItemType "File"
+
+ cd.. -> it will remove myFolder in commands and then start with git-tut
+
+ Get-ChildItem
+ New-Item -Path $env:USERPROFILE\Desktop\one.txt -ItemType File
+
+ git init
+ ls - it will show files
+ ls -Force -> it will shows hidden files
+ cd ../
+ git clone https://github.com/Meenu884/git-journey.git
+ ls
+
+ clear - it will clear all
+
+ cd git-journey
+
+ cd ..        ← go back
+ dir          ← CMD list
+ ls           ← PowerShell list
+ ls -Force    ← show hidden (.git)

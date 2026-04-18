@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone - GitHub</title>
+  <link rel="stylesheet" href="clone.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="brand" aria-label="GitHub clone">
+        <span class="brand__mark">Cat</span>
+        <span class="brand__name">GitCatHub</span>
+      </div>
+
+      <nav class="topbar__nav">
+        <a class="topbar__link is-active" href="#">Code</a>
+        <a class="topbar__link" href="#">Issues</a>
+        <a class="topbar__link" href="#">Pull requests</a>
+      </nav>
+    </div>
+
+    <div class="topbar__right">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search repositories..." autocomplete="off">
+      </div>
+
+      <button id="themeBtn" class="icon-btn" type="button" title="Toggle theme">
+        Toggle theme
+      </button>
+
+      <button id="cloneAllBtn" class="btn btn--secondary" type="button">
+        Clone all
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar__section">
+        <h3 class="sidebar__title">Quick filters</h3>
+
+        <button class="chip is-active" type="button" data-lang="all">All</button>
+        <button class="chip" type="button" data-lang="JavaScript">JavaScript</button>
+        <button class="chip" type="button" data-lang="HTML">HTML</button>
+        <button class="chip" type="button" data-lang="CSS">CSS</button>
+        <button class="chip" type="button" data-lang="React">React</button>
+      </div>
+
+      <div class="sidebar__section">
+        <h3 class="sidebar__title">My profile</h3>
+        <div class="profile">
+          <div class="avatar" aria-hidden="true">J</div>
+          <div>
+            <div class="profile__name">Jayameenakshi</div>
+            <div class="profile__meta">Student • Learner</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="content__header">
+        <div>
+          <h1 class="page-title">Repositories</h1>
+          <p class="muted" id="repoCount">Loading...</p>
+        </div>
+
+        <div class="lang-badge" id="activeLangBadge">Showing: All</div>
+      </div>
+
+      <section class="grid" id="repoGrid" aria-live="polite"></section>
+
+      <div class="empty" id="emptyState">
+        No repositories found. Try another search or filter.
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script defer src="clone.js"></script>
+</body>
+</html>
